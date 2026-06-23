@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Browser</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🚀 Product Browser</h1>
+      <p>CodeVector Backend Task Demo</p>
+    </header>
+
+    <div class="controls">
+      <div class="control-group">
+        <label>Category</label>
+        <select id="category">
+          <option value="">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="books">Books</option>
+          <option value="clothing">Clothing</option>
+          <option value="sports">Sports</option>
+          <option value="home">Home</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label>Page Size</label>
+        <select id="limit">
+          <option value="10">10</option>
+          <option value="20" selected>20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+
+      <button id="refreshBtn">
+        Refresh
+      </button>
+    </div>
+
+    <div class="stats">
+      <div class="card">
+        <h3>Loaded Products</h3>
+        <span id="loadedCount">0</span>
+      </div>
+
+      <div class="card">
+        <h3>Has Next Page</h3>
+        <span id="hasNextPage">-</span>
+      </div>
+
+      <div class="card">
+        <h3>Current Category</h3>
+        <span id="currentCategory">All</span>
+      </div>
+    </div>
+
+    <div class="debug-panel">
+      <h3>Pagination State</h3>
+
+      <div class="debug-item">
+        <strong>Snapshot:</strong>
+        <pre id="snapshot">-</pre>
+      </div>
+
+      <div class="debug-item">
+        <strong>Cursor:</strong>
+        <pre id="cursor">-</pre>
+      </div>
+    </div>
+
+    <div id="products" class="products-grid"></div>
+
+    <div class="footer-actions">
+      <button id="loadMore">
+        Load More Products
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
